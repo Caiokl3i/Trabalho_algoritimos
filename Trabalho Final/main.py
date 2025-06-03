@@ -9,16 +9,5 @@ mais ativos e os temas mais frequentes.
 
 import functions
 
+functions.menu()
 
-opcao = functions.menu()
-
-if opcao == 1:
-    functions.listar_eventos()
-elif opcao == 2:
-    functions.lista_participantes()
-elif opcao == 3:
-    functions.buscar_participantes()
-elif opcao == 0:
-    print('saindo')
-else:
-    print('opção inválida')
