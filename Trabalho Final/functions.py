@@ -32,8 +32,8 @@ def menu():
 def listar_eventos():
     while True:    
         print("====================== EVENTOS ======================")
-        for i, evento in enumerate(eventos.list_events):
-            print(f"{i + 1} - {evento['nome']}")
+        for evento in (eventos.list_events):
+            print(f"{evento['nome']}")
         print()
         print()
         print("======================================================")
@@ -47,6 +47,7 @@ def listar_eventos():
         
         if opcao == 1:
             lista_participantes()
+            break
         elif opcao == 0: 
             break
         else:
