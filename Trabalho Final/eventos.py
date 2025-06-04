@@ -134,4 +134,3 @@ list_events = [
         'participantes_event': list_participantes
     }
 ]
-

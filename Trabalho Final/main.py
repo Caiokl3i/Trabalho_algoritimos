@@ -10,4 +10,3 @@ mais ativos e os temas mais frequentes.
 import functions
 
 functions.menu()
-

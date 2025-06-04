@@ -1,6 +1,7 @@
 
 list_participantes = [
     {
+        'cpf': '#',
         'cod': 'P1',
         'nome': 'Amanda Ribeiro',
         'email': 'amanda.ribeiro@email.com',

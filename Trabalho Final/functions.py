@@ -1,9 +1,13 @@
 import eventos
 import participantes
 
+
+def exibir_menu(titulo):
+    print(f'=' * 25 + " " + titulo.upper() + " " + '=' * 25)
+
 def menu():
     while True:
-        print("====================== MENU INICIAL ======================")
+        exibir_menu('menu')
         print("1 - Ver eventos")
         print("2 - Lista de participantes por evento")
         print("3 - Buscar participante")
@@ -27,16 +31,14 @@ def menu():
             print('opção inválida')
             print()
 
-
-
 def listar_eventos():
     while True:    
-        print("====================== EVENTOS ======================")
+        exibir_menu('evento')
         for evento in (eventos.list_events):
             print(f"{evento['nome']}")
         print()
         print()
-        print("======================================================")
+        exibir_menu('escolha')
         print('1 - Ver participantes através do evento')
         print('0 - Voltar')
         print()
@@ -53,22 +55,27 @@ def listar_eventos():
         else:
             print('Opção inválida')
 
-
 def lista_participantes():
     while True:
-        print("====================== EVENTOS ======================")
+        exibir_menu('eventos')
         for i, evento in enumerate(eventos.list_events):
             print(f"{i + 1} - {evento['nome']}")
         print()
+        print()
         event_chosen = int(input("Escolha qual é o numero do evento para listar os participantes (somente numeros): "))
+        print()
+        print()
+        print('Participantes do evento:')
+        print()
         
         for i, evento in enumerate(eventos.list_events):
             if event_chosen == i:
                 for participantes in evento['participantes_event']:
                     print(participantes['nome'])
+                    
         print()
         print()
-        print("======================================================")
+        exibir_menu('escolha')
         print('1 - Listar participantes de outros eventos')
         print('0 - Voltar')
         print()
@@ -87,6 +94,7 @@ def lista_participantes():
     print()
 
 def buscar_participantes():
+    exibir_menu('codigo do particpante')
     print("Insira o codigo do participante para ver os dados (somente numeros)")
     print()
     
